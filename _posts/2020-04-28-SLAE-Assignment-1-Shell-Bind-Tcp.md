@@ -18,7 +18,7 @@ This is the first post of the SLAE exam assignments series.
 The first assignement is to create a a shell_bind_tcp shellcode that binds to a port and execs shell on incoming connection.  
 The port number should be easily configurable.
 
-All the source code for this assignment can be find on [my github repository](https://github.com/skr0x/SLAE/tree/master/Assignment-01-Shell_bind_tcp)
+All the source code for this assignment can be find on my [github repository](https://github.com/skr0x/SLAE/tree/master/Assignment-01-Shell_bind_tcp)
 ## Shellcode overview
 
 ### Socket basics
@@ -208,7 +208,8 @@ printf "Shellcode : \n"
 objdump -d ./$1|grep '[0-9a-f]:'|grep -v 'file'|grep -v 'format'|cut -f2 -d:|cut -f1-6 -d' '|  
 tr -s ' '|tr '\t' ' '|sed 's/ $//g'|sed 's/ /\\x/g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
 ```
-```terminal_session
+
+```plaintext
 root@kali:~# ./compile.sh shell-bind-tcp
 [x] Assembling...
 [x] Linking...

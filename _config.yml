@@ -52,7 +52,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
+search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
@@ -71,7 +71,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : "https://twitter.com/Skrox_"
 #facebook:
 #  username               :
 #  app_id                 :
@@ -97,24 +97,24 @@ author:
   name             : "Skr0x"
   avatar           : "/assets/images/avatar.png"
   bio              : "OSCP // Preparing for OSCE"
-  location         : "France"
-  email            : 
+  location         : "France, Toulouse"
+  email            : "ZGVtZXkuYWxleGFuZHJlIGF0IHByb3Rvbm1haWwuY29tCg=="
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      #url: mailto:contact@skrox.fr
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://skr0x.github.io"
+      # url: mailto:
+    - label: "Linkedin"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/alexandre-demey/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+      url: "https://twitter.com/Skrox_"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/skr0x"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
