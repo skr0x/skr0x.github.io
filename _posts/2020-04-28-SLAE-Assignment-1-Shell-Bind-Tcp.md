@@ -3,6 +3,8 @@ layout: single
 title: SLAE Assignment 1 - Shell Bind Tcp
 date: 2020-4-28
 classes: wide
+header:
+  teaser: /assets/images/slae/SHELLCODING32.png
 tags:
     - Shellcoding
     - Linux
