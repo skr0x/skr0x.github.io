@@ -1,6 +1,6 @@
 ---
 layout: single
-title: SLAE Assignment 3 - Egg Hunter shellcode
+title: SLAE Assignment 3 - Egg Hunter Shellcode
 date: 2020-5-03
 classes: wide
 header:
