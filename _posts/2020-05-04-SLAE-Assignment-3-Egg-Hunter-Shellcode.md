@@ -20,7 +20,7 @@ This is the third post of the SLAE exam assignments serie.
 The goal of this assignement is to study about Egg Hunter shellcode and create a working demo.
 The payload used with the demo should be easily configurable. 
 
-All the source code for this assignment can be found on my [github repository](https://github.com/skr0x/SLAE/tree/master/Assignment-03-Egg_Hunter_shellcode)
+All the source code for this assignment can be found on my [github repository](https://github.com/skr0x/SLAE/tree/master/Assignment-03-Egg_hunter_shellcode)
 
 ## The Egg Hunter technique
 
