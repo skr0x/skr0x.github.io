@@ -1,6 +1,6 @@
 ---
 layout: single
-title: SLAE Assignment 6 - Polymorphic Shellcode
+title: SLAE Assignment 6 - Polymorphic Shellcodes
 date: 2020-5-12
 classes: wide
 header:
