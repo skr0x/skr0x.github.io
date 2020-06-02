@@ -1,7 +1,7 @@
 ---
 layout: single
-title: SLAE64 Assignment 1 - Shell Bind Tcp
-date: 2020-6-01
+title: SLAE64 Assignment 1 - Shell Bind Tcp with Password
+date: 2020-6-02
 classes: wide
 header:
   teaser: /assets/images/slae/SHELLCODING64.png
