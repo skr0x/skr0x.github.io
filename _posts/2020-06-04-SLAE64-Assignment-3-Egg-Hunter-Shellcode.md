@@ -21,10 +21,10 @@ All the source code for this assignment can be found on my [github repository](h
 
 ## The Egg Hunter technique
 
-I will reuse the same technique as for the SLAE 32 assignment, I will not explain the technique again so if you want to know more about the principle of the egg hunter please take a look at the links below :  
+I will re-use the same technique as for the SLAE 32 assignment, I will not explain the technique again so if you want to know more about the principle of the egg hunter please take a look at the links below :  
 [My blog post for the SLAE 32bits](http://skrox.fr/SLAE-Assignment-3-Egg-Hunter-Shellcode/)  
 [A reference paper by Skape : Safely Searching Process Virtual Address Space](http://hick.org/code/skape/papers/egghunt-shellcode.pdf)  
-[A tutoril on memory paging : x86 Paging Tutorial](https://cirosantilli.com/x86-paging)
+[A tutorial on memory paging : x86 Paging Tutorial](https://cirosantilli.com/x86-paging)
 
 ### A minor difference 
 
