@@ -17,7 +17,7 @@ tags:
 ## Introduction
 For this fourth assignement, we need to create a custom encoding scheme and to use it in a PoC (Proof of Concept) with an execve shellcode.
 
-All the source code for this assignment can be found on my [github repository](https://github.com/skr0x/SLAE/tree/master/Assignment-04-Pseudo_polymorph_two_complement_encoder)
+All the source code for this assignment can be found on my [github repository](https://github.com/skr0x/SLAE64/tree/master/Assignment-04-Pseudo_polymorph_two_complement_encoder)
 
 ## Pseudo Polymorph Two's complment encoder
 
