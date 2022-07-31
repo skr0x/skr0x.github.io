@@ -96,12 +96,12 @@ analytics:
 author:
   name             : "Skr0x"
   avatar           : "/assets/images/avatar.png"
-  bio              : "OSCP // Preparing for OSCE"
-  location         : "France, Toulouse"
-  email            : "ZGVtZXkuYWxleGFuZHJlIGF0IHByb3Rvbm1haWwuY29tCg=="
+  bio              : "OSCP"
+  location         : "France, Olargues"
+  #email            : "ZGVtZXkuYWxleGFuZHJlIGF0IHByb3Rvbm1haWwuY29tCg=="
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+    #- label: "Email"
+    #  icon: "fas fa-fw fa-envelope-square"
       #url: "mailto:"
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
