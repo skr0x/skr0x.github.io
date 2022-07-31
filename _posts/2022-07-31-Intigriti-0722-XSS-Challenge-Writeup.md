@@ -3,7 +3,7 @@ layout: single
 title: Intigriti 0722 - XSS Challenge Write-up
 date: 2020-7-30
 classes: wide
-published: false
+published: true
 tags:
     - Intigriti
     - Writeup
