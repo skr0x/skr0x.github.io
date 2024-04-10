@@ -4,7 +4,7 @@
 var data = {};
 data.toJSON = () => alert(document.domain);
 var a = {toJSON : () => alert(document.domain)};
-parent.postMessage(a,"*");
+parent.postMessage({toJSON : () => alert(document.domain)},"*");
   </script>
 </body>
   
