@@ -3,7 +3,8 @@
   <script>
 var data = {};
 data.toJSON = () => alert(document.domain);
-parent.postMessage(data,"*");
+var a = {toJSON : () => alert(document.domain)};
+parent.postMessage(a,"*");
   </script>
 </body>
   
