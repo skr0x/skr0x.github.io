@@ -1,8 +1,9 @@
 <html>
 <body>
   <script>
-    
-parent.postMessage({action: "\\x3c%3c<>skrox test"},"*");
+var data = {};
+data.toJSON = () => alert(document.domain);
+parent.postMessage(data,"*");
   </script>
 </body>
   
