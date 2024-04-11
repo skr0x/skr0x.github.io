@@ -1,10 +1,7 @@
 <html>
 <body>
   <script>
-var data = {};
-data.toJSON = () => alert(document.domain);
-var a = {toJSON : () => alert(document.domain)};
-parent.postMessage({toJSON : () => alert(document.domain)},"*");
+parent.postMessage({action: "&#060;1&#60;2&#x3c;3\u003c4<"},"*");
   </script>
 </body>
   
