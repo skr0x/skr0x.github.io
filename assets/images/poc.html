@@ -2,13 +2,13 @@
 <body>
   <script>
     
-    parent.postMessage({action: "exec", delayedMessage: "1", timeout: 1999},"*");
-    parent.postMessage({action: "exec", delayedMessage: "2", timeout: 2000},"*");
-    parent.postMessage({action: "exec", delayedMessage: "3", timeout: 2001},"*");
-    parent.postMessage({action: "exec", delayedMessage: "4", timeout: 2002},"*");
-    parent.postMessage({action: "exec", delayedMessage: "5", timeout: 2003},"*");
-    parent.postMessage({action: "exec", delayedMessage: "6", timeout: 2004},"*");
-    parent.postMessage({action: "exec", delayedMessage: "7", timeout: 2005},"*");
+    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "1", timeout: 1999},"*");
+    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "2", timeout: 2000},"*");
+    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "3", timeout: 2001},"*");
+    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "4", timeout: 2002},"*");
+    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "5", timeout: 2003},"*");
+    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "6", timeout: 2004},"*");
+    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "7", timeout: 2005},"*");
     setTimeout(() => {
     parent.postMessage({action: "crash stringify", delayedMessage: "<img src=1 onerror=alert(document.domain) />", timeout: 5000000000000000n},"*");
         }, 2000);
