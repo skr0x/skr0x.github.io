@@ -6,12 +6,12 @@
     parent.postMessage({action: "displayDelayedMessage", delayedMessage: "2", timeout: 2000},"*");
     parent.postMessage({action: "displayDelayedMessage", delayedMessage: "3", timeout: 2001},"*");
     parent.postMessage({action: "displayDelayedMessage", delayedMessage: "4", timeout: 2002},"*");
-    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "5", timeout: 3003},"*");
-    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "6", timeout: 4004},"*");
-    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "7", timeout: 5005},"*");
+    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "5", timeout: 4003},"*");
+    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "6", timeout: 5004},"*");
+    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "7", timeout: 6005},"*");
     setTimeout(() => {
     parent.postMessage({action: "crash stringify", delayedMessage: "<img src=1 onerror=alert(document.domain) />", timeout: 5000000000000000n},"*");
-        }, 2000);
+        }, 4000);
 
   </script>
 </body>
