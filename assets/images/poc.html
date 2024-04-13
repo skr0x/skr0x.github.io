@@ -10,7 +10,7 @@
     parent.postMessage({action: "exec", message: "", timeout: 2004},"*");
     parent.postMessage({action: "exec", message: "", timeout: 2005},"*");
     setTimeout(() => {
-    parent.postMessage({action: "crash stringify", message: "<img src=1 onerror=alert(document.domain) />", timeout: 5000000000000000n},"*");
+    parent.postMessage({action: "crash stringify", delayedMessage: "<img src=1 onerror=alert(document.domain) />", timeout: 5000000000000000n},"*");
         }, 2000);
 
   </script>
